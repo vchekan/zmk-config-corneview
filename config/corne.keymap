@@ -24,6 +24,8 @@
   &kp Z  &kp X  &kp C  &kp V  &kp B        &kp N    &kp M  &kp COMMA  &kp DOT  &kp FSLH
                 &mo 6  &mo 2  &kp SPACE    &kp RET  &mo 3  &kp RALT
             >;
+
+            label = "PC";
         };
 
         mac_flag {
@@ -33,6 +35,8 @@
   &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
                   &trans  &trans  &trans    &trans  &trans  &trans
             >;
+
+            label = "Mac Flag";
         };
 
         L_LR_NAV {
@@ -42,6 +46,8 @@
   &kp PIPE   &kp LEFT_BRACE  &kp RIGHT_BRACE  &kp LEFT_BRACKET  &kp LEFT_BRACKET    &kp BACKSPACE  &kp END   &kp PAGE_DOWN  &kp ESC    &kp LS(TAB)
                              &trans           &trans            &trans              &trans         &tog 5    &trans
             >;
+
+            label = "Nav";
         };
 
         R_LR {
@@ -51,6 +57,8 @@
   &trans  &trans     &trans        &trans        &trans            &kp N1  &kp N2  &kp N3   &kp STAR  &kp MINUS
                      &trans        &trans        &trans            &trans  &trans  &kp DEL
             >;
+
+            label = "Nums";
         };
 
         MAC {
@@ -60,6 +68,8 @@
   &trans  &trans     &trans    &trans    &trans    &trans  &trans  &trans  &trans  &trans
                      &trans    &trans    &trans    &trans  &trans  &trans
             >;
+
+            label = "Mac";
         };
 
         SYS {
@@ -69,6 +79,8 @@
   &trans      &trans  &trans  &trans  &trans    &kp C_VOL_DN     &trans  &trans  &trans   &kp K_SLEEP
                       &trans  &trans  &trans    &trans           &trans  &trans
             >;
+
+            label = "Sys";
         };
     };
 };
