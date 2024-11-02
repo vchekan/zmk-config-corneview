@@ -19,10 +19,10 @@
 
         PC {
             bindings = <
-  &kp Q  &kp W  &kp E  &kp R  &kp T        &kp Y    &kp U  &kp I      &kp O    &kp P
-  &kp A  &kp S  &kp D  &kp F  &kp G        &kp H    &kp J  &kp K      &kp L    &kp SEMI
-  &kp Z  &kp X  &kp C  &kp V  &kp B        &kp N    &kp M  &kp COMMA  &kp DOT  &kp FSLH
-                &mo 6  &mo 2  &kp SPACE    &kp RET  &mo 3  &kp RALT
+  &kp Q  &kp W  &kp E           &kp R  &kp T        &kp Y    &kp U  &kp I      &kp O    &kp P
+  &kp A  &kp S  &kp D           &kp F  &kp G        &kp H    &kp J  &kp K      &kp L    &sl 6
+  &kp Z  &kp X  &kp C           &kp V  &kp B        &kp N    &kp M  &kp COMMA  &kp TAB  &kp FSLH
+                &kp LEFT_SHIFT  &mo 2  &kp SPACE    &kp RET  &mo 3  &kp RCTRL
             >;
 
             label = "PC";
@@ -41,10 +41,10 @@
 
         L_LR_NAV {
             bindings = <
-  &kp EXCL   &kp AT          &kp HASH         &kp DLLR          &kp PRCNT           &kp DEL        &kp HOME  &kp PG_UP      &kp EQUAL  &kp PLUS
-  &kp CARET  &kp AMPS        &kp ASTRK        &kp LPAR          &kp RPAR            &kp LEFT       &kp DOWN  &kp UP         &kp RIGHT  &kp TAB
-  &kp PIPE   &kp LEFT_BRACE  &kp RIGHT_BRACE  &kp LEFT_BRACKET  &kp LEFT_BRACKET    &kp BACKSPACE  &kp END   &kp PAGE_DOWN  &kp ESC    &kp LS(TAB)
-                             &trans           &trans            &trans              &trans         &tog 5    &trans
+  &trans  &trans  &trans       &trans           &trans    &kp DEL        &kp PG_UP  &kp HOME  &kp INS    &kp ESC
+  &trans  &trans  &kp LC(TAB)  &kp LC(LS(TAB))  &trans    &kp LEFT       &kp DOWN   &kp UP    &kp RIGHT  &kp PLUS
+  &trans  &trans  &trans       &trans           &trans    &kp BACKSPACE  &kp PG_DN  &kp END   &kp TAB    &kp LS(TAB)
+                  &trans       &trans           &trans    &trans         &tog 5     &trans
             >;
 
             label = "Nav";
@@ -52,10 +52,10 @@
 
         R_LR_NUMS {
             bindings = <
-  &trans  &trans     &trans        &trans        &trans            &kp N7  &kp N8  &kp N9   &kp N0    &kp EQUAL
-  &trans  &sk LCTRL  &sk LEFT_GUI  &sk LEFT_ALT  &sk LEFT_SHIFT    &kp N4  &kp N5  &kp N6   &kp FSLH  &kp PLUS
-  &trans  &trans     &trans        &trans        &trans            &kp N1  &kp N2  &kp N3   &kp STAR  &kp MINUS
-                     &trans        &trans        &trans            &trans  &trans  &kp DEL
+  &trans  &trans     &trans        &trans        &trans    &kp N7  &kp N8  &kp N9   &kp N0     &kp EQUAL
+  &trans  &sk LCTRL  &sk LEFT_GUI  &sk LEFT_ALT  &trans    &kp N4  &kp N5  &kp N6   &kp MINUS  &kp STAR
+  &trans  &trans     &trans        &trans        &trans    &kp N1  &kp N2  &kp N3   &kp PLUS   &trans
+                     &trans        &trans        &trans    &trans  &trans  &kp DEL
             >;
 
             label = "Nums";
@@ -63,10 +63,10 @@
 
         MAC {
             bindings = <
-  &trans  &trans     &trans    &trans    &trans    &trans  &trans  &trans  &trans  &trans
-  &trans  &sk LCTRL  &sk LALT  &sk LGUI  &trans    &trans  &trans  &trans  &trans  &trans
-  &trans  &trans     &trans    &trans    &trans    &trans  &trans  &trans  &trans  &trans
-                     &trans    &trans    &trans    &trans  &trans  &trans
+  &trans  &trans     &trans    &trans    &trans    &trans  &trans  &trans             &trans  &trans
+  &trans  &sk LCTRL  &sk LALT  &sk LGUI  &trans    &trans  &trans  &trans             &trans  &trans
+  &trans  &trans     &trans    &trans    &trans    &trans  &trans  &trans             &trans  &trans
+                     &trans    &trans    &trans    &trans  &trans  &kp LG(RIGHT_GUI)
             >;
 
             label = "Mac";
@@ -74,13 +74,23 @@
 
         SYS {
             bindings = <
-  &kp F1      &kp F2  &kp F3  &kp F4  &kp F5    &kp F7           &kp F8  &kp F9  &kp F10  &kp F11
-  &bt BT_NXT  &trans  &trans  &trans  &kp F6    &kp C_VOLUME_UP  &trans  &trans  &trans   &kp F12
-  &trans      &trans  &trans  &trans  &trans    &kp C_VOL_DN     &tog 1  &trans  &trans   &kp K_SLEEP
-                      &trans  &trans  &trans    &trans           &trans  &trans
+  &kp F1      &kp F2  &kp F3  &kp F4  &kp F5    &kp F7           &kp F8            &kp F9      &kp F10  &kp F11
+  &bt BT_NXT  &trans  &trans  &trans  &kp F6    &kp C_VOLUME_UP  &kp K_PLAY_PAUSE  &kp C_MUTE  &trans   &kp F12
+  &trans      &trans  &trans  &trans  &trans    &kp C_VOL_DN     &tog 1            &trans      &trans   &kp K_SLEEP
+                      &trans  &trans  &trans    &trans           &trans            &trans
             >;
 
             label = "Sys";
+        };
+
+        PUNCT {
+            label = "Punct";
+            bindings = <
+  &kp EXCL           &kp AT                 &kp HASH         &kp DLLR  &kp PRCNT    &kp CARET  &kp AMPS  &trans  &trans  &trans
+  &kp DOUBLE_QUOTES  &kp LEFT_PARENTHESIS   &kp LEFT_BRACE   &kp LBKT  &kp GT       &kp GRAVE  &trans    &trans  &trans  &trans
+  &kp SQT            &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACE  &kp RBKT  &kp LT       &kp TILDE  &trans    &trans  &trans  &trans
+                                            &trans           &trans    &trans       &trans     &trans    &trans
+            >;
         };
     };
 };
